@@ -1,0 +1,27 @@
+@import './App.scss';
+
+.container {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.statusBtn {
+  display: block;
+  margin: 10rem auto;
+  width: 11.5rem;
+  height: 2.063rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white);
+  cursor: pointer;
+}
