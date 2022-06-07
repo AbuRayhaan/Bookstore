@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+// import { Progress } from 'antd';
 import '../scss/BookCard.scss';
 
 function BookCard({ book }) {
   return (
     <section className="bookCardWrapper">
       <div className="bookCardContainer">
-        <span className="genre">{book.genre}</span>
+        <span className="category">{book.category}</span>
         <span className="title">{book.title}</span>
         <span className="author">{book.author}</span>
         <div className="options">
@@ -72,7 +72,7 @@ BookCard.propTypes = {
     id: PropTypes.string,
     title: PropTypes.string,
     author: PropTypes.string,
-    genre: PropTypes.string,
+    category: PropTypes.string,
     completed: PropTypes.string,
   }).isRequired,
 };
