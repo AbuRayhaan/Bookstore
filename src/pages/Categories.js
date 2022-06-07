@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
+// import Header from '../components/Header';
 import '../scss/Categories.scss';
 
 function Categories() {
@@ -9,7 +9,7 @@ function Categories() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="container">
         <button type="button" className="statusBtn" onClick={handleClick}>
           Check status

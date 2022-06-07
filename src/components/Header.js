@@ -4,19 +4,24 @@ import { FaUser } from 'react-icons/fa';
 import '../scss/Header.scss';
 
 function Header() {
+  const navLinkStyles = ({ isActive }) => ({
+    fontWeight: isActive ? 'bold' : 'normal',
+    textDecoration: isActive ? 'none' : 'none',
+  });
+
   return (
     <section className="headerWrapper">
       <div className="headerContainer">
         <span className="Bookstore-CMS">Bookstore CMS</span>
         <NavLink
           to="/"
-          className={(isActive) => `nav-link${!isActive ? ' unselected' : ''}`}
+          style={navLinkStyles}
         >
           <span className="BOOKS">BOOKS</span>
         </NavLink>
         <NavLink
           to="/categories"
-          className={(isActive) => `nav-link${!isActive ? ' unselected' : ''}`}
+          style={navLinkStyles}
         >
           <span className="CATEGORIES">CATEGORIES</span>
         </NavLink>
