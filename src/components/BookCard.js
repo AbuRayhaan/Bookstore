@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { Progress } from 'antd';
+import { Progress } from 'antd';
+import { useDispatch } from 'react-redux';
+import { remBook } from '../redux/books/books';
 import '../scss/BookCard.scss';
 
 function BookCard({ book }) {
+  const dispatch = useDispatch();
   return (
     <section className="bookCardWrapper">
       <div className="bookCardContainer">
@@ -14,7 +17,7 @@ function BookCard({ book }) {
           <span className="comments">Comments</span>
           {' '}
           |
-          <span className="remove">Remove</span>
+          <button type="button" className="remove" onClick={() => dispatch(remBook(book.item_id))}>Remove</button>
           {' '}
           |
           <span className="edit">Edit</span>
@@ -22,26 +25,18 @@ function BookCard({ book }) {
       </div>
       <div className="progressContainer">
         <div className="progressCircle">
-          <div className="outer">
-            <div className="inner" />
-          </div>
-          <svg
-            className="svgCircle"
-            xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
-            width="80px"
-            height="80px"
-          >
-            <defs>
-              <linearGradient id="GradientColor">
-                <stop offset="0%" stopColor="#307bbe" />
-                <stop offset="100%" stopColor="#379cf6" />
-              </linearGradient>
-            </defs>
-            <circle cx="40" cy="40" r="37.5" strokeLinecap="round" />
-          </svg>
+          <Progress
+            type="circle"
+            width={80}
+            format={() => ''}
+            strokeColor={{
+              '0%': '#307bbe',
+              '100%': '#379cf6',
+            }}
+            trailColor="#e8e8e8"
+            percent={book.completed}
+          />
         </div>
-
         <div className="progressPercent">
           <span className="percentComplete">
             {`${book.completed}%`}
@@ -57,7 +52,7 @@ function BookCard({ book }) {
           Current Chapter
         </span>
         <span className="currentLesson">
-          Chapter 17
+          {book.currentLesson}
         </span>
         <span className="updateProgress">
           Update progress
@@ -69,11 +64,12 @@ function BookCard({ book }) {
 
 BookCard.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.string,
+    item_id: PropTypes.string,
     title: PropTypes.string,
     author: PropTypes.string,
     category: PropTypes.string,
-    completed: PropTypes.string,
+    completed: PropTypes.number,
+    currentLesson: PropTypes.string,
   }).isRequired,
 };
 
