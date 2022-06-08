@@ -8,25 +8,24 @@ function Header() {
     fontWeight: isActive ? 'bold' : 'normal',
     textDecoration: isActive ? 'none' : 'none',
   });
-
   return (
     <section className="headerWrapper">
       <div className="headerContainer">
-        <span className="Bookstore-CMS">Bookstore CMS</span>
+        <span className="bookstore-CMS">Bookstore CMS</span>
         <NavLink
           to="/"
           style={navLinkStyles}
         >
-          <span className="BOOKS">BOOKS</span>
+          <span className="books">BOOKS</span>
         </NavLink>
         <NavLink
-          to="/categories"
+          to="categories"
           style={navLinkStyles}
         >
-          <span className="CATEGORIES">CATEGORIES</span>
+          <span className="categories">CATEGORIES</span>
         </NavLink>
       </div>
-      <button type="submit" aria-label="User" className="Oval"><FaUser /></button>
+      <button type="submit" aria-label="User" className="oval"><FaUser /></button>
     </section>
   );
 }
