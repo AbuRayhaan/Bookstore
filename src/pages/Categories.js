@@ -1,19 +1,33 @@
 import React from 'react';
-// import Header from '../components/Header';
+import { Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
 import '../scss/Categories.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { checkingStatus } from '../redux/categories/categories';
 
 function Categories() {
-  const handleClick = () => {
-    alert('Page Under Construction');
-  };
+  const status = useSelector((state) => state.categories);
+  const dispatch = useDispatch();
+
+  const antIcon = (
+    <LoadingOutlined
+      style={{
+        fontSize: 24,
+      }}
+      spin
+    />
+  );
 
   return (
     <>
-      {/* <Header /> */}
       <div className="container">
-        <button type="button" className="statusBtn" onClick={handleClick}>
+        <Spin indicator={antIcon} />
+        <button type="button" className="statusBtn" onClick={() => dispatch(checkingStatus())}>
           Check status
         </button>
+        <span className="statusMsg">
+          {status}
+        </span>
       </div>
     </>
   );
