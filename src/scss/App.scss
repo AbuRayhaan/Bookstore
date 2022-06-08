@@ -1,20 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap');
 
-:root {
-  --bubble-gum-pink: #ff5ab7;
-  --black: #1e1e1e;
-  --grey-border: #e8e8e8;
-  --cool-blue: #4386bf;
-  --pinkish-grey: #c7c7c7;
-  --pale-grey: #f5f6fa;
-  --warm-grey: #888;
-  --white: #fff;
-  --azure: #0290ff;
-  --very-light-pink: #c4c4c4;
-  --medium-blue: #307bbe;
-  --black-two: #121212;
-}
+$clr-azure: #0290ff;
+$clr-black-two: #121212;
+$clr-cool-blue: #4386bf;
+$clr-grey-border: #e8e8e8;
+$clr-warm-grey: #888;
+$clr-white: #fff;
 
 $border-check: 1px solid crimson;
 
@@ -22,7 +14,6 @@ $border-check: 1px solid crimson;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-decoration: none;
 }
 
 html {
@@ -31,40 +22,4 @@ html {
 
 body {
   width: 100vw;
-}
-
-@media screen and (min-width: 768px) {
-  .Text-Style-4 {
-    font-family: 'Roboto Slab', serif;
-    font-size: 1rem;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: -0.4px;
-    color: var(--black-two);
-  }
-
-  .Text-Style-2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.875rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: var(--black-two);
-  }
-
-  .Text-Style {
-    font-family: 'Roboto Slab', serif;
-    font-size: 0.813rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 0.5px;
-    text-align: center;
-    color: var(--white);
-  }
 }
