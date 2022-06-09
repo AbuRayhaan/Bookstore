@@ -41,7 +41,9 @@ const booksSlice = createSlice({
       return [books];
     },
     [addBookApi.fulfilled]: (state, action) => [...state, action.payload],
-    [delBookApi.fulfilled]: (state, action) => [...state.filter((el) => el.item_id !== action.payload.item_id)],
+    [delBookApi.fulfilled]: (state, action) => [
+      ...state.filter((el) => el.item_id !== action.payload.item_id),
+    ],
   },
 });
 
