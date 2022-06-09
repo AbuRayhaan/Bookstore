@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { addBookApi } from '../redux/books/booksSlice';
 import '../scss/Form.scss';
 
 function Form() {
@@ -29,7 +29,7 @@ function Form() {
       author: bookAuthor,
       category: bookCategory,
     };
-    dispatch(addBook(bookObj));
+    dispatch(addBookApi(bookObj));
     setBookTitle('');
     setBookAuthor('');
     setBookCategory('');
@@ -64,11 +64,11 @@ function Form() {
         >
           <option value="">Select Category</option>
           <option value="Action">Action</option>
-          <option value="Classic">Technology</option>
+          <option value="Technology">Technology</option>
           <option value="Economy">Economy</option>
-          <option value="Romance">Finance</option>
+          <option value="Finance">Finance</option>
           <option value="Science Fiction">Science Fiction</option>
-          <option value="Unknown">Others</option>
+          <option value="Others">Others</option>
         </select>
         <button type="submit" className="addBook" onClick={checkValidity}>
           ADD BOOK
