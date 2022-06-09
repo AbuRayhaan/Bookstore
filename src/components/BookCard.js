@@ -17,7 +17,7 @@ function BookCard({ book }) {
         <div className="options">
           <span className="comments">Comments</span>
           {' '}
-          |
+          ||
           <button
             type="button"
             className="remove"
@@ -28,7 +28,7 @@ function BookCard({ book }) {
             Remove
           </button>
           {' '}
-          |
+          ||
           <span className="edit">Edit</span>
         </div>
       </div>
