@@ -2,13 +2,10 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
-// Initial State
 const initialState = [];
 
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/KeN4dcNprXyRptzUhK9r/books';
-// KeN4dcNprXyRptzUhK9r -- My ID -- KeN4dcNprXyRptzUhK9r
 
-// Async Action Creators
 export const fetchBookApi = createAsyncThunk('fetchBookApi', async () => {
   const response = await axios.get(url);
   return response.data;
@@ -29,7 +26,6 @@ export const delBookApi = createAsyncThunk('delBookApi', async (input) => {
   return response.data;
 });
 
-// Slice Reducer
 const booksSlice = createSlice({
   name: 'books',
   initialState,
@@ -45,7 +41,6 @@ const booksSlice = createSlice({
       return [books];
     },
     [addBookApi.fulfilled]: (state, action) => [...state, action.payload],
-    // eslint-disable-next-line
     [delBookApi.fulfilled]: (state, action) => [...state.filter((el) => el.item_id !== action.payload.item_id)],
   },
 });
