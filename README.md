@@ -14,7 +14,7 @@ This is my Leaderboard project in the Microverse curriculum.
 <!-- 
 ## Live Demo
 
-[Live Demo Link](https://aburayhaan.github.io/Leaderboard/) -->
+[Live Demo Link](https://bookstores-heroku.herokuapp.com/) -->
 
 ## Getting Started
 
