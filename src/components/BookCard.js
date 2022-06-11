@@ -54,7 +54,7 @@ function BookCard({ book }) {
             Completed
           </span>
         </div>
-        <div className="line2" />
+        <div className="line-2" />
       </div>
       <div className="progressStatus">
         <span className="currentChapter">

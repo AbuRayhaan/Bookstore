@@ -321,9 +321,14 @@
     color: $clr-black-two;
   }
 
-  .line2 {
-    margin: 1rem 0;
-    border: solid 1px $clr-grey-border;
+  .line-2 {
+    display: block;
+    width: 0.125rem;
+    height: 4.375rem;
+    border: 1px solid black;
+    opacity: 0.1;
+    margin-right: 4rem;
+    margin-top: 1rem;
   }
 
   .progressStatus {
