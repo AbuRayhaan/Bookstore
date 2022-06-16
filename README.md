@@ -11,10 +11,10 @@ This is my Leaderboard project in the Microverse curriculum.
 - SCSS
 - JSX
 - REACT-ROUTER-DOM
-<!-- 
+
 ## Live Demo
 
-[Live Demo Link](https://bookstores-heroku.herokuapp.com/) -->
+[Live Demo Link](https://bookstore-library-app.netlify.app/)
 
 ## Getting Started
 
