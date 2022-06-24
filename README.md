@@ -3,7 +3,7 @@ An online book store application built using react and redux. It allows users to
 
 ![screenshot](images/screenshot.png)
 
-This is my Leaderboard project in the Microverse curriculum.
+This is my Bookstore project in the Microverse curriculum.
 
 ## Built With
 
